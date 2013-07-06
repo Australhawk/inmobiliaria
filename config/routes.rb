@@ -1,4 +1,5 @@
 Inmobiliaria::Application.routes.draw do
+  get "inicio/contacto"
   get "inicio/index"
   root "inicio#index"
   # The priority is based upon order of creation: first created -> highest priority.
