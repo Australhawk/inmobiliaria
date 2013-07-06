@@ -9,7 +9,12 @@
     = csrf_meta_tags
   %body
     / header
-    %header
+    - if request.path== root_path
+      - @height = 625
+    - else
+      -@height = 150
+      
+    %header{ style: "height: #{@height}px"}
       .container_16
         .logo
           %h1
@@ -19,7 +24,7 @@
         %nav
           %ul
             %li
-              %a.current{:href => "index.html"} Home
+              =link_to "Inicio", root_path, data: {"no-turbolink" => ""}
             %li
               %a{:href => "index-1.html"} Selling
             %li
@@ -31,9 +36,11 @@
             %li
               %a{:href => "index-5.html"} Finance
             %li
-              %a{:href => "index-6.html"} Contacts
+              = link_to "Contacto", inicio_contacto_path
         / faded slider begin
+        
         #faded
+          
           .rap
             %a{:href => "#"}
               = holder_tag "571x398"
@@ -89,6 +96,9 @@
                   3 baths
           =image_tag "extra-banner.png", class: "extra-banner"
         / faded slider end
+    #flash.container_16{style: "color:green"}
+      = flash[:notice]
+      
     = yield
     / footer
     %footer

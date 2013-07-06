@@ -102,18 +102,21 @@
               %a.button{:href => "#"} Read More
             / /.box
           %article.last
-            %h2 Contact Form
-            %form#contacts-form{:action => ""}
+            %h2 Formulario de Contacto
+            = form_for @contacto, url: {action: "create_contacto"}, html: {id:"contacts-form"} do |f|
               %fieldset
+                -if @contacto.errors.present?
+                  #error
+                    =@contacto.errors.first[1]
                 %label
                   %span Name:
-                  %input{:type => "text"}/
+                  =f.text_field :name
                 %label
                   %span E-mail:
-                  %input{:type => "text"}/
+                  =f.text_field :mail
                 .wrapper
                   %span Message:
-                  %textarea
+                  =f.text_area :message
                 .wrapper
                   %a.button{:href => "#", :onClick => "document.getElementById('contacts-form').submit()"} Submit
                   %a.button{:href => "#", :onClick => "document.getElementById('contacts-form').submit()"} Reset
