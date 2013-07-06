@@ -9,8 +9,11 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
-#User HAML for HML
+#Use HAML for HML
 gem 'haml-rails'
+
+#Holder
+gem 'holder_rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
