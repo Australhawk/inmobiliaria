@@ -3,16 +3,16 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'ready', ->
-  $("#pagina").hide()
+  $("#loading").hide()
   
 
 $(document).on "page:fetch", ->
-  $("#pagina").show()
-
+  $("#loading").show()
+  $("#eclay").hide()
 
 $(document).on "page:change", ->
-  $("#pagina").hide()
-  
+  $("#loading").hide()
+  $("#eclay").show()
   
     
   
