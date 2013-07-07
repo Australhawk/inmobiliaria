@@ -8,6 +8,8 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    #pagina
+      =image_tag "loading.gif", size: "25x25"
     / header
     - if request.path== root_path
       - @height = 625
@@ -26,15 +28,15 @@
             %li
               =link_to "Inicio", root_path, data: {"no-turbolink" => ""}
             %li
-              %a{:href => "index-1.html"} Selling
+              %a{:href => "#"} Selling
             %li
-              %a{:href => "index-2.html"} Buying
+              %a{:href => "#"} Buying
             %li
-              %a{:href => "index-3.html"} Renting
+              %a{:href => "#"} Renting
             %li
-              %a{:href => "index-4.html"} Moving
+              %a{:href => "#"} Moving
             %li
-              %a{:href => "index-5.html"} Finance
+              %a{:href => "#"} Finance
             %li
               = link_to "Contacto", inicio_contacto_path
         / faded slider begin

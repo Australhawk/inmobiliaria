@@ -18,3 +18,9 @@
 	background-color: red;
 	padding: 5px;
 }
+#pagina{
+	position:absolute;
+    margin:0 auto;
+    
+    text-align:center;/* Add This*/
+}
