@@ -9,7 +9,7 @@
     = csrf_meta_tags
   %body
     #pagina
-      %a#eclay{href: "http://www.facebook.com/eclaycom", target: "_blank"}
+      %a#eclay{href: "http://www.facebook.com/eclaycom", target: "_blank", title: "e-Clay - Soluciones Web"}
         =image_tag "ico.png", size: "25x25"
       %a#loading{href: "http://www.facebook.com/eclaycom", target: "_blank"}
         =image_tag "loading.gif", size: "25x25"
@@ -126,9 +126,12 @@
             %li
               %a{:href => "index-6.html"} contacts
         %p.copy
-          %span real estate
-          \&nbsp;&copy; &nbsp;2010 &nbsp; &nbsp;
+          %span Rama Propiedades
+          \&nbsp;&copy; &nbsp;2013 &nbsp; &nbsp;
           %a{:href => "index-7.html"} Privacy Policy
+          %br 
+          Desarrolado por 
+          = link_to "e-Clay", "http://www.facebook.com/eclaycom", target: "_blank"
     = javascript_include_tag "application"
     :javascript
       $(function(){
