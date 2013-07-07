@@ -5,7 +5,7 @@
     %meta{:charset => "utf-8"}
     %title= content_for?(:title) ? yield(:title) : "Untitled"
     = stylesheet_link_tag    "application"
-    = javascript_include_tag "application"
+    
     = csrf_meta_tags
   %body
     #pagina
@@ -24,12 +24,12 @@
         .logo
           %h1
             %a{:href => "index.html"}
-              %strong Real
-              Estate
+              %strong Rama
+              
         %nav
           %ul
             %li
-              =link_to "Inicio", root_path, data: {"no-turbolink" => ""}
+              =link_to "Inicio", root_path
             %li
               =link_to "Vender", inicio_venta_path
             %li
@@ -43,64 +43,64 @@
             %li
               = link_to "Contacto", inicio_contacto_path
         / faded slider begin
-        
-        #faded
-          
-          .rap
-            %a{:href => "#"}
-              = holder_tag "571x398"
-            %a{:href => "#"}
-              = holder_tag "571x398"
-            %a{:href => "#"}
-              = holder_tag "571x398"
-          %ul.pagination
-            %li
-              %a{:href => "#", :rel => "0"}
-                = holder_tag "93x84"
-                %span.left
-                  Villa
-                  %br/
-                  2007 year
-                  %br/
-                  5000 sq.ft
-                %span.right
-                  Brick, glass
-                  %br/
-                  3 beds
-                  %br/
-                  2 baths
-            %li
-              %a{:href => "#", :rel => "1"}
-                = holder_tag "93x84"
-                %span.left
-                  Villa
-                  %br/
-                  2009 year
-                  %br/
-                  3500 sq.ft
-                %span.right
-                  Brick, glass
-                  %br/
-                  5 beds
-                  %br/
-                  3 baths
-            %li
-              %a{:href => "#", :rel => "2"}
-                = holder_tag "93x84"
-                %span.left
-                  Villa
-                  %br/
-                  2010 year
-                  %br/
-                  4200 sq.ft
-                %span.right
-                  Brick, glass
-                  %br/
-                  4 beds
-                  %br/
-                  3 baths
-          =image_tag "extra-banner.png", class: "extra-banner"
-        / faded slider end
+        - if request.path== root_path
+          #faded
+            
+            .rap
+              %a{:href => "#"}
+                = holder_tag "571x398"
+              %a{:href => "#"}
+                = holder_tag "571x398"
+              %a{:href => "#"}
+                = holder_tag "571x398"
+            %ul.pagination
+              %li
+                %a{:href => "#", :rel => "0"}
+                  = holder_tag "93x84"
+                  %span.left
+                    Villa
+                    %br/
+                    2007 year
+                    %br/
+                    5000 sq.ft
+                  %span.right
+                    Brick, glass
+                    %br/
+                    3 beds
+                    %br/
+                    2 baths
+              %li
+                %a{:href => "#", :rel => "1"}
+                  = holder_tag "93x84"
+                  %span.left
+                    Villa
+                    %br/
+                    2009 year
+                    %br/
+                    3500 sq.ft
+                  %span.right
+                    Brick, glass
+                    %br/
+                    5 beds
+                    %br/
+                    3 baths
+              %li
+                %a{:href => "#", :rel => "2"}
+                  = holder_tag "93x84"
+                  %span.left
+                    Villa
+                    %br/
+                    2010 year
+                    %br/
+                    4200 sq.ft
+                  %span.right
+                    Brick, glass
+                    %br/
+                    4 beds
+                    %br/
+                    3 baths
+            =image_tag "extra-banner.png", class: "extra-banner"
+          / faded slider end
     #flash.container_16{style: "color:green"}
       = flash[:notice]
       
@@ -128,6 +128,7 @@
           %span real estate
           \&nbsp;&copy; &nbsp;2010 &nbsp; &nbsp;
           %a{:href => "index-7.html"} Privacy Policy
+    = javascript_include_tag "application"
     :javascript
       $(function(){
         
@@ -138,4 +139,4 @@
         });
       })
       
-      Cufon.now();
+      Cufon.refresh();
