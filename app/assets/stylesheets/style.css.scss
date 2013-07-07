@@ -46,7 +46,7 @@ h4 {font-size:1em;color:#616161;margin-bottom:12px}
 h5 {font-size:15px;line-height:20px;font-weight:normal;color:#909090;font-style:italic;margin-bottom:1em}
 hgroup h5 {margin-bottom:4px}
 hgroup h4 {margin-bottom:18px}
-.button {display:inline-block;position:relative;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#d42400;background:-webkit-gradient(linear, 0 0, 0 70%, from(#ed2800), to(#b21e00));background:-moz-linear-gradient(#ed2800, #b21e00 70%);background:linear-gradient(#ed2800, #b21e00 70%);-pie-background:linear-gradient(#ed2800, #b21e00 70%);behavior:asset-url("js/PIE.htc");padding:0 18px 0 18px;line-height:35px;color:#fff;font-weight:bold;text-decoration:none;-webkit-transition-duration:0.5s}
+.button {display:inline-block;position:relative;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#d42400!important;background:-webkit-gradient(linear, 0 0, 0 70%, from(#ed2800), to(#b21e00));background:-moz-linear-gradient(#ed2800, #b21e00 70%);background:linear-gradient(#ed2800, #b21e00 70%);-pie-background:linear-gradient(#ed2800, #b21e00 70%);behavior:asset-url("js/PIE.htc");padding:0 18px 0 18px;line-height:35px;color:#fff;font-weight:bold;text-decoration:none;-webkit-transition-duration:0.5s}
 .button:hover {background:#fff;color:#000}
 /*==================boxes====================*/
 .box {background:asset-url("box-bg.gif") 0 100% repeat-x #b5c83c;padding:24px 18px 40px 20px;border:1px solid #c9dd47;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;behavior:asset-url("js/PIE.htc");position:relative;color:#fff}
@@ -121,5 +121,5 @@ footer .container_16 {font-size:.625em}
 		#contacts-form span {float:left;width:66px}
 		#contacts-form input {float:left;background:#1e1e1e;border:1px solid #a4a4a4;width:210px;padding:1px 5px 1px 5px;color:#fff}
 		#contacts-form textarea {float:left;width:210px;padding:1px 5px 1px 5px;height:195px;background:#1e1e1e;border:1px solid #a4a4a4;overflow:auto;color:#fff}
-		#contacts-form .button {float:right;margin-left:16px;margin-top:14px}
+		#contacts-form .button {float:right;margin-right:12px;margin-top:14px;cursor:pointer}
 /*==========================================*/

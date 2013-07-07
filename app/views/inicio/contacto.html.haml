@@ -118,5 +118,4 @@
                   %span Message:
                   =f.text_area :message
                 .wrapper
-                  %a.button{:href => "#", :onClick => "document.getElementById('contacts-form').submit()"} Submit
-                  %a.button{:href => "#", :onClick => "document.getElementById('contacts-form').submit()"} Reset
+                  =f.submit "Enviar", class: "button"
