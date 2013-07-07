@@ -31,15 +31,15 @@
             %li
               =link_to "Inicio", root_path, data: {"no-turbolink" => ""}
             %li
-              %a{:href => "#"} Selling
+              =link_to "Vender", inicio_venta_path
             %li
-              %a{:href => "#"} Buying
+              =link_to "Comprar", inicio_compra_path
             %li
-              %a{:href => "#"} Renting
+              =link_to "Arriendo", inicio_arriendo_path
             %li
-              %a{:href => "#"} Moving
+              =link_to "Traslados", inicio_traslados_path
             %li
-              %a{:href => "#"} Finance
+              =link_to "Financiar", inicio_financiamiento_path
             %li
               = link_to "Contacto", inicio_contacto_path
         / faded slider begin
